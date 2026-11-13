@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Завтраки",
+    "items": [
+      {"name":"Деревенский завтрак","description":"","prices":[2490]},
+      {"name":"Баварский завтрак","description":"","prices":[2990]},
+      {"name":"Авторская шакшука","description":"","prices":[1890]},
+      {"name":"Сырники","description":"","prices":[1890]},
+      {"name":"Каша рисовая","description":"","prices":[1090]},
+      {"name":"Каша «5 злаков»","description":"","prices":[1090]}
+    ]
+  },
+  {
+    "name": "Салаты",
+    "items": [
+      {"name":"Хрустящие баклажаны","description":"","prices":[3190]},
+      {"name":"Цезарь с курицей","description":"","prices":[2890]},
+      {"name":"Греческий","description":"","prices":[2890]},
+      {"name":"Руккола с креветками","description":"","prices":[3190]},
+      {"name":"Креветки с авокадо","description":"","prices":[3290]},
+      {"name":"Салат с ананасом","description":"","prices":[2190]},
+      {"name":"Охотничий салат","description":"","prices":[2890]},
+      {"name":"Свежий микс","description":"","prices":[1890]}
+    ]
+  },
+  {
+    "name": "Супы",
+    "items": [
+      {"name":"Куриный суп","description":"","prices":[1690]},
+      {"name":"Чечевичный суп","description":"","prices":[1690]},
+      {"name":"Рамен","description":"","prices":[3190]},
+      {"name":"Том Ям","description":"","prices":[4990]}
+    ]
+  },
+  {
+    "name": "Суши и роллы",
+    "items": [
+      {"name":"Сет «Токио»","description":"","prices":[8990]},
+      {"name":"Америка","description":"","prices":[4300]},
+      {"name":"Цезарь жареный","description":"","prices":[2900]},
+      {"name":"Филадельфия","description":"","prices":[4900]},
+      {"name":"Филадельфия запечённая","description":"","prices":[4900]},
+      {"name":"Ролл с креветкой и авокадо","description":"","prices":[3100]},
+      {"name":"Каппа маки","description":"","prices":[2200]}
+    ]
+  },
+  {
+    "name": "Горячие блюда",
+    "items": [
+      {"name":"Куриное филе с грибами","description":"","prices":[3290]},
+      {"name":"Курица в кисло-сладком соусе","description":"","prices":[2890]},
+      {"name":"Курица миланеза","description":"","prices":[2990]},
+      {"name":"Фри с мясом","description":"","prices":[2900]},
+      {"name":"Судак с овощами в кляре","description":"","prices":[3790]},
+      {"name":"Казан-кебаб","description":"","prices":[3990]},
+      {"name":"Курица по-азиатски","description":"","prices":[3490]},
+      {"name":"Креветки по-азиатски","description":"","prices":[3490]},
+      {"name":"Говядина с моцареллой","description":"","prices":[3690]}
+    ]
+  },
+  {
+    "name": "Паста",
+    "items": [
+      {"name":"Фетучини с курицей и грибами","description":"","prices":[2890]},
+      {"name":"Спагетти болоньезе","description":"","prices":[3090]},
+      {"name":"Спагетти с песто и сыром страчателла","description":"","prices":[3200]}
+    ]
+  },
+  {
+    "name": "Fast Food",
+    "items": [
+      {"name":"Фирменный бургер","description":"","prices":[2890]},
+      {"name":"Пицца «Маргарита»","description":"","prices":[2500]},
+      {"name":"Пицца «Пепперони»","description":"","prices":[3200]},
+      {"name":"Пицца «4 сыра»","description":"","prices":[3500]},
+      {"name":"Пицца с курицей и грибами","description":"","prices":[3500]},
+      {"name":"Пицца «Ранч»","description":"","prices":[3090]},
+      {"name":"Пицца «Болоньезе»","description":"","prices":[3190]},
+      {"name":"Пицца «Мексика»","description":"","prices":[3090]}
+    ]
+  },
+  {
+    "name": "Гарниры",
+    "items": [
+      {"name":"Картофельное пюре","description":"","prices":[1090]},
+      {"name":"Картофельные дольки","description":"","prices":[1090]},
+      {"name":"Картофель фри","description":"","prices":[1190]},
+      {"name":"Рис","description":"","prices":[790]}
+    ]
+  },
+  {
+    "name": "Закуски",
+    "items": [
+      {"name":"Сырные палочки","description":"","prices":[2000]},
+      {"name":"Наггетсы","description":"","prices":[1790]}
+    ]
+  },
+  {
+    "name": "Барное меню / Кофе",
+    "items": [
+      {"name":"Эспрессо (200 мл)","description":"","prices":[790]},
+      {"name":"Американо (300/400 мл)","description":"","prices":[890,1090]},
+      {"name":"Флэт уайт (200 мл)","description":"","prices":[990]},
+      {"name":"Капучино (300/400 мл)","description":"","prices":[1290,1390]},
+      {"name":"Латте (300/400 мл)","description":"","prices":[1190,1290]},
+      {"name":"Раф (300 мл)","description":"","prices":[1390]}
+    ]
+  },
+  {
+    "name": "Кофейные десерты",
+    "items": [
+      {"name":"Гляссе (350 мл)","description":"","prices":[1590]},
+      {"name":"Аффогато (350 мл)","description":"","prices":[1790]}
+    ]
+  },
+  {
+    "name": "Ice Coffee",
+    "items": [
+      {"name":"Айс-американо","description":"","prices":[990]},
+      {"name":"Айс-капучино","description":"","prices":[1290]},
+      {"name":"Айс-латте","description":"","prices":[1290]},
+      {"name":"Бамбл кофе","description":"","prices":[1490]},
+      {"name":"Фраппучино","description":"","prices":[1490]}
+    ]
+  },
+  {
+    "name": "Дополнительно",
+    "items": [
+      {"name":"Дополнительный шот","description":"","prices":[450]},
+      {"name":"Сироп","description":"","prices":[150]},
+      {"name":"Мёд","description":"","prices":[150]},
+      {"name":"Лимон","description":"","prices":[200]}
+    ]
+  },
+  {
+    "name": "Лимонады",
+    "items": [
+      {"name":"Малина-маракуйя","description":"","prices":[2390,1290]},
+      {"name":"Апельсин-мята","description":"","prices":[2390,1290]},
+      {"name":"Клубника-лайм","description":"","prices":[2390,1290]},
+      {"name":"Киви-грейпфрут","description":"","prices":[2390,1290]}
+    ]
+  },
+  {
+    "name": "Чай (0,9 л)",
+    "items": [
+      {"name":"Чай чёрный","description":"","prices":[1190]},
+      {"name":"Чай зелёный","description":"","prices":[1190]},
+      {"name":"Чай по-казахски","description":"","prices":[1490]},
+      {"name":"Чай марокканский","description":"","prices":[1690]},
+      {"name":"Чай манго-апельсин","description":"","prices":[1690]},
+      {"name":"Чай апельсин-облепиха","description":"","prices":[1690]},
+      {"name":"Чай смородина-мята","description":"","prices":[1690]}
+    ]
+  },
+  {
+    "name": "Напитки",
+    "items": [
+      {"name":"Вода ASU (1 л, бутылка)","description":"","prices":[990]},
+      {"name":"Borjomi (0,5 л)","description":"","prices":[1690]},
+      {"name":"Pepsi (1 л)","description":"","prices":[1490]},
+      {"name":"Сок Gracio (1 л)","description":"","prices":[1890]},
+      {"name":"Сок Rich (250 мл)","description":"","prices":[990]}
+    ]
+  },
+  {
+    "name": "Восточные блюда",
+    "items": [
+      {"name":"Цомян лагман","description":"","prices":[3100],"image":"dish-1"},
+      {"name":"Динь-Динь лагман","description":"","prices":[3100],"image":"dish-2"},
+      {"name":"Хау-Хуа лагман","description":"","prices":[3200],"image":"dish-3"},
+      {"name":"Хошаны","description":"","prices":[3190],"image":"dish-4"},
+      {"name":"Гуйру лагман","description":"","prices":[3100],"image":"dish-5"}
+    ]
+  }
+]
