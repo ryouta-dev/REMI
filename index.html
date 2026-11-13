@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#14110f">
 <title>REMI — кафе и ресторан в Семее | Меню и бронирование</title>
-<meta name="description" content="REMI, кафе и ресторан в Семее. Меню с ценами, фотографии интерьера и демонстрационная форма бронирования.">
+<meta name="description" content="REMI, кафе и ресторан в Семее. Меню с ценами, фотографии интерьера и бронирование через WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_KZ">
 <meta property="og:title" content="REMI — кафе и ресторан в Семее">
-<meta property="og:description" content="Меню REMI с ценами, интерьер ресторана и демонстрационная форма бронирования.">
+<meta property="og:description" content="Меню REMI с ценами, интерьер ресторана и бронирование через WhatsApp.">
 <meta property="og:image" content="https://ryouta-dev.github.io/REMI/assets/room-4-1280.webp">
 <meta property="og:image:alt" content="Интерьер ресторана REMI">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -33,10 +33,10 @@
   <div class="shell header-inner">
     <a class="wordmark" href="#home" aria-label="REMI — главная">REMI</a>
     <nav class="desktop-nav" aria-label="Основная навигация"><a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a></nav>
-    <a class="button primary header-book" href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать столик</a>
+    <a class="button primary header-book" data-whatsapp hidden><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать в WhatsApp</a>
     <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg><span>Разделы</span></button>
   </div>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Основная навигация" hidden><a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a><a href="#booking">Бронирование</a></nav>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Основная навигация" hidden><a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a><a data-whatsapp hidden>Бронь в WhatsApp</a></nav>
 </header>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
@@ -49,7 +49,7 @@
       <h1 id="hero-title">REMI</h1>
       <p class="hero-copy">От завтраков до восточных блюд</p>
       <div class="hero-actions">
-        <a class="button primary" href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать столик</a>
+        <a class="button primary" data-whatsapp hidden><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать в WhatsApp</a>
         <a class="button outline" href="#menu">Посмотреть меню <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
       </div>
     </div>
@@ -58,7 +58,7 @@
     <div class="shell features-inner">
       <a href="#menu"><svg class="icon" aria-hidden="true"><use href="#i-cutlery"></use></svg><span><strong>Меню</strong><small>Завтраки, паста, лагман</small></span></a>
       <a href="#gallery"><svg class="icon" aria-hidden="true"><use href="#i-lamp"></use></svg><span><strong>Интерьер</strong><small>Фотографии зала REMI</small></span></a>
-      <a href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><span><strong>Бронирование</strong><small>Демонстрационная форма</small></span></a>
+      <a data-whatsapp hidden><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg><span><strong>Бронирование</strong><small>Написать в WhatsApp</small></span></a>
       <a href="#contacts"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><span><strong>Контакты</strong><small>Семей, Казахстан</small></span></a>
     </div>
   </div>
@@ -98,21 +98,6 @@
       <div class="gallery-grid"><button type="button" class="gallery-item" data-photo="assets/room-5-1280.webp" aria-label="Открыть фото. Зал REMI с деревянными столами и подвесными светильниками"><img src="assets/room-5-480.webp" srcset="assets/room-5-480.webp 480w, assets/room-5-960.webp 960w, assets/room-5-1280.webp 1280w" sizes="(min-width: 1000px) 550px, (min-width: 700px) 45vw, 90vw" width="1280" height="720" loading="lazy" decoding="async" alt="Зал REMI с деревянными столами и подвесными светильниками"><span><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg></span></button><button type="button" class="gallery-item" data-photo="assets/room-6-720.webp" aria-label="Открыть фото. Столы у стены с тёплой подсветкой в REMI"><img src="assets/room-6-360.webp" srcset="assets/room-6-360.webp 360w, assets/room-6-720.webp 720w" sizes="(min-width: 1000px) 550px, (min-width: 700px) 45vw, 90vw" width="720" height="1280" loading="lazy" decoding="async" alt="Столы у стены с тёплой подсветкой в REMI"><span><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg></span></button><button type="button" class="gallery-item" data-photo="assets/room-7-720.webp" aria-label="Открыть фото. Клетчатые кресла и гирлянды в зале REMI"><img src="assets/room-7-360.webp" srcset="assets/room-7-360.webp 360w, assets/room-7-720.webp 720w" sizes="(min-width: 1000px) 550px, (min-width: 700px) 45vw, 90vw" width="720" height="1280" loading="lazy" decoding="async" alt="Клетчатые кресла и гирлянды в зале REMI"><span><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg></span></button><button type="button" class="gallery-item" data-photo="assets/room-4-1280.webp" aria-label="Открыть фото. Столики у окна в зале REMI"><img src="assets/room-4-480.webp" srcset="assets/room-4-480.webp 480w, assets/room-4-960.webp 960w, assets/room-4-1280.webp 1280w" sizes="(min-width: 1000px) 550px, (min-width: 700px) 45vw, 90vw" width="1280" height="720" loading="lazy" decoding="async" alt="Столики у окна в зале REMI"><span><svg class="icon" aria-hidden="true"><use href="#i-expand"></use></svg></span></button></div>
     </div>
   </section>
-  <section class="section shell reservation" id="booking" aria-labelledby="booking-title">
-    <div><p class="eyebrow">Бронирование</p><h2 id="booking-title">Забронировать столик</h2><p class="muted" id="demo-note">Демонстрационная форма. Введённые данные остаются в браузере.</p></div>
-    <form id="booking-form" aria-describedby="demo-note">
-      <div class="form-grid">
-        <label>Дата<input type="date" id="date" required></label>
-        <label>Время<input type="time" id="time" required></label>
-        <label>Гости<input type="number" id="guests" min="1" step="1" value="2" inputmode="numeric" required></label>
-        <label>Имя<input type="text" id="guest-name" autocomplete="given-name" maxlength="80" required></label>
-        <label class="full">Телефон<input type="tel" id="phone" autocomplete="tel" inputmode="tel" maxlength="26" placeholder="+7 7XX XXX XX XX" required></label>
-      </div>
-      <button class="button primary full" id="book-submit" type="submit" disabled><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Проверить заявку</button>
-      <p class="form-status" id="booking-status" role="status"></p>
-      <noscript>Для проверки формы включите JavaScript.</noscript>
-    </form>
-  </section>
 </main>
 <footer class="site-footer" id="contacts">
   <div class="shell footer-inner">
@@ -124,7 +109,7 @@
     <a class="text-link" id="instagram" href="https://www.instagram.com/remi_kz/"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg> Instagram <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
   </div>
 </footer>
-<nav class="mobile-dock" aria-label="Быстрые действия"><a class="button outline" href="#menu"><svg class="icon" aria-hidden="true"><use href="#i-cutlery"></use></svg> Меню</a><a class="button primary" href="#booking"><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать</a></nav>
+<nav class="mobile-dock" aria-label="Быстрые действия"><a class="button outline" href="#menu"><svg class="icon" aria-hidden="true"><use href="#i-cutlery"></use></svg> Меню</a><a class="button primary" data-whatsapp hidden><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Бронь в WhatsApp</a></nav>
 <dialog id="photo-dialog" aria-label="Фотография интерьера"><button type="button" class="icon-button photo-close" aria-label="Закрыть фото"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button><img alt="" width="1280" height="720"></dialog>
 </body>
 </html>

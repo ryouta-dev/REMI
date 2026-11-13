@@ -133,6 +133,14 @@ async function loadRestaurant() {
       node.textContent = restaurant[node.dataset.value] || restaurant.placeholder;
     });
     if (restaurant.phone) $('[data-value="phone"]').href = 'tel:' + restaurant.phone.replace(/[^+\d]/g, '');
+    if (restaurant.whatsapp) {
+      const number = restaurant.whatsapp.replace(/\D/g, '');
+      const message = encodeURIComponent(restaurant.whatsappMessage);
+      document.querySelectorAll('[data-whatsapp]').forEach(link => {
+        link.href = 'https://wa.me/' + number + '?text=' + message;
+        link.hidden = false;
+      });
+    }
     $('#instagram').href = restaurant.instagram;
     renderFeatured(categories, restaurant);
     renderMenu(categories, restaurant);
@@ -153,6 +161,7 @@ mobileNav.addEventListener('click', event => {
   const link = event.target.closest('a');
   if (!link) return;
   setNav(false);
+  if (!link.hash) return;
   const target = $(link.hash);
   target.tabIndex = -1;
   target.focus({preventScroll: true});
@@ -181,42 +190,5 @@ $('.photo-close').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => {
   if (event.target === dialog) dialog.close();
 });
-
-const form = $('#booking-form');
-const date = $('#date');
-const time = $('#time');
-const guestName = $('#guest-name');
-const phone = $('#phone');
-const status = $('#booking-status');
-const semeyClock = new Intl.DateTimeFormat('sv-SE', {
-  timeZone: 'Asia/Almaty',
-  dateStyle: 'short',
-  timeStyle: 'short',
-});
-
-function validateBooking() {
-  const [today, now] = semeyClock.format().split(' ');
-  date.min = today;
-  time.setCustomValidity(date.value === today && time.value && time.value <= now
-    ? 'Выберите время позже текущего времени в Семее.' : '');
-  guestName.setCustomValidity(guestName.value && !guestName.value.trim() ? 'Введите имя.' : '');
-  const digits = phone.value.replace(/\D/g, '');
-  const validPhone = /^[+\d][\d\s().-]*$/.test(phone.value.trim()) && digits.length >= 10 && digits.length <= 15;
-  phone.setCustomValidity(phone.value && !validPhone ? 'Введите телефон, содержащий от 10 до 15 цифр.' : '');
-}
-
-form.addEventListener('input', () => {
-  status.textContent = '';
-  validateBooking();
-});
-form.addEventListener('focusin', validateBooking);
-form.addEventListener('submit', event => {
-  event.preventDefault();
-  validateBooking();
-  if (!form.reportValidity()) return;
-  status.textContent = 'Это демо: заявка не отправлена';
-});
-validateBooking();
-$('#book-submit').disabled = false;
 
 loadRestaurant();
