@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#14110f">
+<meta name="theme-color" content="#f8ecdc">
 <title>REMI — кафе и ресторан в Семее | Меню и бронирование</title>
 <meta name="description" content="REMI, кафе и ресторан в Семее. Меню с ценами, фотографии интерьера и бронирование через WhatsApp.">
 <meta property="og:type" content="website">
@@ -13,6 +13,10 @@
 <meta property="og:image" content="https://ryouta-dev.github.io/REMI/assets/room-4-1280.webp">
 <meta property="og:image:alt" content="Интерьер ресторана REMI">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;family=Playfair+Display:wght@500&amp;display=swap">
 <link rel="stylesheet" href="styles.css">
 <script src="app.js" defer></script>
 </head>
@@ -34,7 +38,13 @@
     <a class="wordmark" href="#home" aria-label="REMI — главная">REMI</a>
     <nav class="desktop-nav" aria-label="Основная навигация"><a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a></nav>
     <a class="button primary header-book" data-whatsapp hidden><svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg> Забронировать в WhatsApp</a>
-    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg><span>Разделы</span></button>
+    <div class="header-controls">
+      <button type="button" class="icon-button theme-toggle" id="theme-toggle" aria-label="Тёмная тема" aria-pressed="false" title="Переключить тему" hidden>
+        <svg class="icon theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15A8.6 8.6 0 0 1 9 3.5 8.6 8.6 0 1 0 20.5 15Z"/></svg>
+        <svg class="icon theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2"/></svg>
+      </button>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg><span>Разделы</span></button>
+    </div>
   </div>
   <nav id="mobile-nav" class="mobile-nav" aria-label="Основная навигация" hidden><a href="#home">Главная</a><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Галерея</a><a href="#contacts">Контакты</a><a data-whatsapp hidden>Бронь в WhatsApp</a></nav>
 </header>
