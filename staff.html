@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Панель персонала — REMI</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="ordering.css">
+  <script type="module" src="staff.js"></script>
+</head>
+<body>
+  <header class="top"><a class="brand" href="./">REMI</a><span id="identity">Персонал</span></header>
+  <main class="shell">
+    <h1>Панель персонала</h1>
+    <p id="message" role="status"></p>
+    <form id="login" class="panel login" hidden>
+      <h2>Войти</h2>
+      <div class="fields">
+        <label>Логин <input name="login" required autocomplete="username"></label>
+        <label>Пароль <input name="password" required type="password" autocomplete="current-password"></label>
+      </div>
+      <button type="submit">Войти</button>
+    </form>
+    <div id="workspace" hidden>
+      <div class="staff-actions row">
+        <span id="acceptance" class="status"></span>
+        <button id="switch" type="button" disabled></button>
+        <button id="logout" class="secondary" type="button">Выйти</button>
+      </div>
+      <nav class="tabs row" aria-label="Разделы панели">
+        <button data-tab="queue" class="secondary" type="button">Заказы</button>
+        <button data-tab="history" class="secondary" type="button">История</button>
+        <button data-tab="catalog" class="secondary admin" type="button">Меню</button>
+        <button data-tab="tables" class="secondary admin" type="button">Столики</button>
+        <button data-tab="staff" class="secondary admin" type="button">Сотрудники</button>
+      </nav>
+      <div id="content" class="stack"></div>
+    </div>
+  </main>
+</body>
+</html>

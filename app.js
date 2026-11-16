@@ -17,6 +17,14 @@ async function readData(path) {
 function dishImage(dish, sizes) {
   const image = element('img');
   const path = 'assets/' + dish.image;
+  if (dish.image.startsWith('photo.php?id=')) {
+    image.src = dish.image;
+    image.width = 204;
+    image.height = 116;
+    image.loading = 'lazy';
+    image.alt = 'Подача блюда «' + dish.name + '»';
+    return image;
+  }
   image.src = path + '-204.webp';
   image.srcset = path + '-144.webp 144w, ' + path + '-204.webp 204w';
   image.sizes = sizes;
@@ -35,6 +43,9 @@ function price(dish, placeholder) {
     if (index) label.append(' / ');
     label.append(element('span', '', formatter.format(amount) + '\u00a0₸'));
   });
+  if (dish.available === 0 || dish.available === false || dish.variants?.every(variant => !variant.available)) {
+    label.append(document.createElement('br'), 'Нет в наличии');
+  }
   return label;
 }
 
@@ -128,7 +139,8 @@ function renderMenu(categories, restaurant) {
 
 async function loadRestaurant() {
   try {
-    const [restaurant, categories] = await Promise.all([readData('restaurant.json'), readData('menu.json')]);
+    const catalog = $('meta[name="remi-catalog"]')?.content || 'menu.json';
+    const [restaurant, categories] = await Promise.all([readData('restaurant.json'), readData(catalog)]);
     document.querySelectorAll('[data-value]').forEach(node => {
       node.textContent = restaurant[node.dataset.value] || restaurant.placeholder;
     });
